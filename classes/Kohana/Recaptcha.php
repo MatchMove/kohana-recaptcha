@@ -60,6 +60,6 @@ class Kohana_Recaptcha {
     
     public function html()
     {
-        return recaptcha_get_html($this->_config['public_key'], $this->_error);
+        return recaptcha_get_html($this->_config['public_key'], $this->_error, Arr::get($this->_config, 'https', true));
     }
 }
